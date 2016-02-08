@@ -9,6 +9,7 @@ opt			OPTIONALLY
 newline		NEWLINE
 0+			ZEROORMORE
 1+			ONEORMORE
+choose		CHOOSEONE
 bef 		BEFORE
 aft 		AFTER
 ret 		RETURNS
@@ -17,7 +18,7 @@ asm 		ASM
 asmstart	ASMSTART
 asmend		ASMEND
 cbstart		CUTEBASICSTART
-cbstart		CUTEBASICEND
+cbend		CUTEBASICEND
 start		START
 end			END
 var			VARIABLE
