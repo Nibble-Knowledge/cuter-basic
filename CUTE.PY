@@ -4,7 +4,7 @@ import os
 
 keywords = {
 	'lang' 		: 	'shorthand', 
-	'dialects' 	: 	'', 
+	'dialects' 	: 	'none', 
 	'use' 		: 	'use', 
 	'def' 		: 	'def',
 	'bef' 		: 	'bef',
@@ -39,8 +39,18 @@ useage = {}
 
 if __name__ == "__main__":
 	if len(sys.argv) > 1:
-		
-	print "Using language " + keywords['lang'] + "",
+		with open(sys.argv[1]) as f:
+			for line in f:
+				replaces = line.split()
+				if len(replaces) > 1:
+					if keywords.get(replaces[0].strip()) != None:
+						if replaces[0].strip() == 'lang' or replaces[0].strip() == 'dialects':
+							keywords[replaces[0].strip()] = replaces[1].strip()
+						else:
+							keywords[replaces[1].strip()] = keywords[replaces[0].strip()]
+							del keywords[replaces[0].strip()]
+	print "Using language " + keywords['lang'],
 	if keywords['dialects'] != "":
-		print " specifically dialects " + keywords['dialects']
-	
+		print "specifically dialects " + keywords['dialects']
+		print keywords
+		
