@@ -1,0 +1,36 @@
+lang		ENGLISH
+dialects	CANADIAN
+
+use 		USEAGE
+def 		DEFINE
+bef 		BEFORE
+aft 		AFTER
+ret 		RETURNS
+incl 		INCLUDE
+asm 		ASM
+asmstart	ASMSTART
+asmend		ASMEND
+start		START
+end			END
+var			VARIABLE
+stmt		STATEMENT
+ig			IGNORE
+
+start		START		USEAGE START defines the start of a program block.
+end			END			USEAGE END defines the end of a program block.
+exit		EARLYEND	USEAGE EARLYEND exits the program before END.
+
+let 		LET			USEAGE LET declares a new variable.
+= 			BE 			USEAGE BE assigns a value to a variable.
+is 			AS 			USEAGE AS defines the size of a variable in a multiple of nibbles.
+
+if			IF			USEAGE IF executes the following statement if the conditional following the statement is true.
+elif		ELSEIF		USEAGE ELSEIF follows an IF statement and executes if both the IF is false and it's own statement is true.
+else		ELSE		USEAGE ELSE follows an IF statement and possibly a series of ELSEIF statements and executes if all previous statements are false.
+endif		ENDIF		USEAGE ENDIF closes an IF-ELSEIF-ELSE chain.
+while		LOOPWHILE	USEAGE LOOPWHILE loops until the following statement is false.
+endwhile	ENDLOOP		USEAGE ENDLOOP closes a LOOPWHILE statement.
+breakloop	EXITLOOP	USEAGE EXITLOOP exits the innermost loop before the statement in LOOPWHILE is false.
+breakif		EXITIF		USEAGE EXITIF exits the innermost IF..ENDIF block before reaching ENDIF
+lbl			LABEL		USEAGE LABEL places a label for jumping to with GOTO. Discouraged in most cases.
+goto		GOTO		USEAGE GOTO jumps unconditionally to the label name succeeding it. Discouraged in most cases.

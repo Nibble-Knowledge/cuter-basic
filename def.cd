@@ -1,0 +1,11 @@
+def ADD
+use Adds things together
+bef TERMBEFORE is 1
+aft TERMAFTER is 1
+ret ADDRES is 1
+asmstart
+	LOD TERMBEFORE
+	ADD TERMAFTER
+	STR ADDRES
+asmend
+
