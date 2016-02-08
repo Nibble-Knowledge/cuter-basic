@@ -3,6 +3,12 @@ dialects	CANADIAN
 
 use 		USEAGE
 def 		DEFINE
+name		NAME
+none		NOTHING
+opt			OPTIONALLY
+newline		NEWLINE
+0+			ZEROORMORE
+1+			ONEORMORE
 bef 		BEFORE
 aft 		AFTER
 ret 		RETURNS
@@ -10,6 +16,8 @@ incl 		INCLUDE
 asm 		ASM
 asmstart	ASMSTART
 asmend		ASMEND
+cbstart		CUTEBASICSTART
+cbstart		CUTEBASICEND
 start		START
 end			END
 var			VARIABLE
